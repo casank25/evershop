@@ -90,6 +90,8 @@ async function resizeAndUploadImage(
 }
 
 module.exports = async function awsGenerateProductImageVariant(data) {
+  //eslint-disable-next-line no-console
+  console.log("Generating product image variants...");
   if (getConfig('system.file_storage') === 's3') {
     try {
       const s3Client = new S3Client({ region: getEnv('AWS_REGION') });

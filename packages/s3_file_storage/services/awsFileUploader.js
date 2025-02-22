@@ -7,6 +7,8 @@ const bucketName = getEnv('AWS_BUCKET_NAME');
 
 module.exports.awsFileUploader = {
   upload: async (files, requestedPath) => {
+    //eslint-disable-next-line no-console
+    console.log('Uploading files to S3');
     const uploadedFiles = [];
     const uploadPromises = [];
     // eslint-disable-next-line no-restricted-syntax
